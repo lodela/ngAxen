@@ -1,0 +1,53 @@
+.contactUs {
+  cursor: pointer;
+}
+
+.modal.contactUsmodal {
+  .modal-dialog {
+    // border:solid 1px red;
+    width: 100% !important;
+    .modal-content {
+      .modal-header {
+        position: relative;
+      }
+    }
+  }
+}
+
+nav{
+  -webkit-box-shadow: -5px 3px 10px 0 rgba(0,0,0,0.5);
+  box-shadow: -5px 3px 10px 0 rgba(0,0,0,0.5);
+  border:solid 1px gray;
+  border-width: 0 0 1px 0;
+
+
+  &.sticky-top{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+
+  .navbar-brand{
+    outline: 0;
+    img{
+      height: 55px;
+      width: auto;
+      background: none;
+      -webkit-transition: all 500ms ease-in-out;
+      -moz-transition: all 500ms ease-in-out;
+      -ms-transition: all 500ms ease-in-out;
+      -o-transition: all 500ms ease-in-out;
+      transition: all 500ms ease-in-out;
+
+      &.big-logo{
+        height: 55px !important;
+        width: auto;
+      }
+      &.small-logo{
+        height: 35px !important;
+        width: auto;
+      }
+    }
+  }
+}

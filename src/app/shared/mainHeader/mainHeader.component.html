@@ -1,0 +1,13 @@
+<section>
+  <div class="jumbotron paralax" [ngClass]="section">
+    <div class="container">
+      <div class="row">
+        <h1 @fadeInLeft>{{sectionTitle}}</h1>
+        <p @fadeInLeft class="lead">{{sectionSlogan}}</p>
+      </div>
+      <div class="row" *ngIf="btnState">
+        <button @fadeIn type="button" (click)="letsTalk()" class="btn letsTalk" [ngClass]="sectionBtnColor">LET'S TALK</button>
+      </div>
+    </div>
+  </div>
+</section>

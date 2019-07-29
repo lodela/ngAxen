@@ -1,0 +1,90 @@
+section.cards{
+  padding: 30px 0;
+}
+section.cards .container h2{
+  padding: 0px 0 30px 0
+}
+.cards .eventCard{
+}
+.cards .eventCard .card{
+  background: none;
+  overflow: hidden;
+  height: 440px;
+}
+.cards.appDevServ h2{
+  color: rgba(124,188,10,1);
+  margin:0 0 0 0;
+}
+.cards.appDevServ .eventCard .card{
+  background:pink;
+}
+.cards .eventCard .card-title{
+  padding: 0;
+}
+.cards .eventCard .card-block{
+  -webkit-box-flex: 0;
+  flex:0;
+}
+.cards .eventCard .card-text{
+  font-size: 14px;
+}
+.cards .eventCard .card-img-top{
+  width: 100%;
+}
+/*Call to Action*/
+.cards .eventCard .card:hover::after{
+  display: none;
+}
+.cards .eventCard .header-line {
+  height: 15px;
+  width: 100%;
+  content: '';
+  display: block;
+}
+.cards .eventCard .gradient-color-1{
+  background: -webkit-linear-gradient(left,#fc636b 0,#ff6d92 60%,#fd9a00 100%);
+  background: linear-gradient(to right,#fc636b 0,#ff6d92 60%,#fd9a00 100%);
+}
+.cards .eventCard .gradient-color-2{
+    background: #3be8b0;
+    background: -webkit-linear-gradient(bottom left,#3be8b0 0,#02ceff 100%);
+    background: linear-gradient(to top right,#3be8b0 0,#02ceff 100%);
+}
+.cards .eventCard .gradient-color-3{
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#6db3f2+0,54a3ee+50,3690f0+51,1e69de+100;Blue+Gloss+%233 */
+background: #6db3f2; /* Old browsers */
+background: -moz-linear-gradient(-45deg,  #6db3f2 0%, #54a3ee 50%, #3690f0 51%, #1e69de 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(-45deg,  #6db3f2 0%,#54a3ee 50%,#3690f0 51%,#1e69de 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(135deg,  #6db3f2 0%,#54a3ee 50%,#3690f0 51%,#1e69de 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6db3f2', endColorstr='#1e69de',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+}
+.cards .eventCard .gradient-color-4{
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#9dd53a+0,a1d54f+50,80c217+51,7cbc0a+100;Green+Gloss+%231 */
+background: #9dd53a; /* Old browsers */
+background: -moz-linear-gradient(-45deg,  #9dd53a 0%, #a1d54f 50%, #80c217 51%, #7cbc0a 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(-45deg,  #9dd53a 0%,#a1d54f 50%,#80c217 51%,#7cbc0a 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(135deg,  #9dd53a 0%,#a1d54f 50%,#80c217 51%,#7cbc0a 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9dd53a', endColorstr='#7cbc0a',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+}
+.cards .eventCard a.btn{
+  position: absolute;
+  bottom: 10px;
+  width: 85%;
+}
+/**/
+/*Utility Class*/
+.text-white{
+  color: white;
+}
+.no-margin{
+  margin:0;
+}
+.no-margin-top{
+  margin-top:0;
+}
+.pad-right{
+  margin-right: 0.5em;
+}
+/**/

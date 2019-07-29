@@ -1,0 +1,154 @@
+#team {
+    background: #eee !important;
+}
+.appDevServi h2{
+  line-height: 0 !important;
+  padding: 0 0 44px 0 !important;
+}
+.services .row{
+  margin: 26px 0;
+}
+.services .card{
+  min-height: 125px;
+  height: 125px;
+}
+.services.appModernization .card{
+  /* border:solid 1px red !important; */
+  min-height: 540px;
+  height: 540px;
+}
+
+#team .card {
+    border: none;
+    background: #ffffff;
+}
+
+#team h2, .services h2{
+  font-family: 'Montserrat', sans-serif !important;
+  font-size: 28px;
+  line-height: 44px;
+  text-align: center; color: #005596;
+  padding: 38px 0 30px 0;
+  font-weight: normal;
+}
+
+.image-flip:hover .backside,
+.image-flip.hover .backside {
+    -webkit-transform: rotateY(0deg);
+    -moz-transform: rotateY(0deg);
+    -o-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+    border-radius: .25rem;
+}
+
+.image-flip:hover .frontside,
+.image-flip.hover .frontside {
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+}
+
+.mainflip {
+    -webkit-transition: 1s;
+    -webkit-transform-style: preserve-3d;
+    -ms-transition: 1s;
+    -moz-transition: 1s;
+    -moz-transform: perspective(1000px);
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    transition: 1s;
+    transform-style: preserve-3d;
+    position: relative;
+}
+
+.frontside {
+    position: relative;
+    -webkit-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
+    z-index: 2;
+    margin-bottom: 30px;
+}
+
+.backside {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: white;
+    -webkit-transform: rotateY(-180deg);
+    -moz-transform: rotateY(-180deg);
+    -o-transform: rotateY(-180deg);
+    -ms-transform: rotateY(-180deg);
+    transform: rotateY(-180deg);
+    -webkit-box-shadow: 5px 7px 9px -4px rgb(158, 158, 158);
+    -moz-box-shadow: 5px 7px 9px -4px rgb(158, 158, 158);
+    box-shadow: 5px 7px 9px -4px rgb(158, 158, 158);
+}
+
+.frontside,
+.backside {
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transition: 1s;
+    -webkit-transform-style: preserve-3d;
+    -moz-transition: 1s;
+    -moz-transform-style: preserve-3d;
+    -o-transition: 1s;
+    -o-transform-style: preserve-3d;
+    -ms-transition: 1s;
+    -ms-transform-style: preserve-3d;
+    transition: 1s;
+    transform-style: preserve-3d;
+}
+
+.frontside .card{
+  height: 412px;
+}
+.backside .card {
+  height: 512px;
+}
+
+.backside .card a {
+    font-size: 18px;
+    color: #4582EC !important;
+}
+
+.frontside .card .card-title,
+.backside .card .card-title {
+    color: #4582EC !important;
+}
+
+.frontside .card .card-body img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+}
+
+#preCallForm .modal-header h3{
+  font-size: 30px;
+  margin: 0;
+  color:white;
+}
+#preCallForm .modal-header h3 span{
+  font-size: 60% !important;
+  font-weight: 400;
+}
+#preCallForm .modal-body .instructions{
+  font-size: 16px; line-height: 22px;
+  margin: 0;
+}
+#preCallForm .card-precall{
+  border:none;
+  background: none;
+}
+#preCallForm .card-precall:hover::after {
+    display: none;
+}
+#preCallForm .custom-checkbox{
+  padding: 5px 0 0 0;
+  font-size: 12px;
+  margin: 0 0 0 26px;
+}

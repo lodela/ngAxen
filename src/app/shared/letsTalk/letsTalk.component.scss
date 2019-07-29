@@ -1,0 +1,19 @@
+.modal-header{
+  height: 50px;
+  padding: 10px;
+  background: #6598d9;
+
+  h4{
+    font-weight: 300;
+    color: white;
+    line-height: 30px;
+    margin: 0;
+    padding: 0 0 0 8px;
+
+    &.modal-title{
+      font-family: 'Montserrat', sans-serif;
+      font-weight: bold;
+      font-size: 22px;
+    }
+  }
+}

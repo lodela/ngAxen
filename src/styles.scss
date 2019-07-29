@@ -1,0 +1,946 @@
+@import url('https://fonts.googleapis.com/css?family=Lato|Montserrat');
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+}
+body {
+  color: #777;
+}
+*::-webkit-scrollbar {
+    width: 5px;
+}
+
+*::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #005596;
+  outline: 1px solid slategrey;
+}
+h3, h4 {
+  margin: 10px 0 30px 0;
+  letter-spacing: 1px;
+  font-size: 20px;
+  color: #111;
+}
+
+.card{
+  background: rgba(0,0,0,0.05);
+  cursor: pointer;
+  &::after{
+    width: 130px;
+    content: 'click to read more...';
+    float: right;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    font-size: 14px;
+    text-align: right;
+    color: cornflowerblue;
+    display: none;
+  }
+  &:hover{
+    background: rgba(255,255,255,0.3);
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    &::after{
+      display: block;
+    }
+  }
+}
+.card-text{
+  color: #555;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 18px;
+}
+
+
+section{
+  h3{
+    font-size: 21px;
+    line-height: 32px;
+    margin: 0;
+    padding: 24px 0;
+    font-weight: bold;
+    color: inherit;
+  }
+  p{
+    font-family: 'Montserrat', sans-serif !important;
+    font-size: 18px;
+    margin: 10px;
+    margin: 0 10px 30px 10px;
+  }
+  &.blockquotes{
+    padding: 0 0 30px 0;
+    .container{
+      padding: 0 0 20px 0;
+      border: solid 1px #777;
+      border-width: 0 0 1px 0;
+    }
+    div[class^="col-"]{
+      padding:10px;
+    }
+    blockquote{
+      margin: 0;
+      padding: 0 0 0 85px;
+      position: relative;
+      border: none;
+      &::before{
+        content: '';
+        display: block;
+        width: 70px;
+        height: 70px;
+        position:absolute; left: 0; top:10px;
+        -webkit-border-radius: 100%;
+        border-radius: 100%;
+        border: solid 1px cornflowerblue;
+        background-image: url(data:image/svg+xml,%3Csvg%20width%3D%22115%22%20height%3D%2290%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cg%3E%3Ctitle%3EAxen.com%20Blockquote%3C%2Ftitle%3E%3Cg%20id%3D%22blockquote%22%3E%3Cpath%20d%3D%22m107.4995%2C82.2415l-42.812%2C0l0%2C-42.811c0%2C-11.065%201.275%2C-31.673%2042.813%2C-31.673c0%2C0.015%200%2C2.059%200%2C9.091c-19.972%2C0%20-22.471%2C12.666%20-21.369%2C22.582l21.368%2C0l0%2C42.811zm-57.187%2C-42.811l-21.368%2C0c-1.103%2C-9.916%201.396%2C-22.582%2021.367%2C-22.582c0%2C-7.032%200%2C-9.076%200%2C-9.091c-41.536%2C0%20-42.812%2C20.607%20-42.812%2C31.673l0%2C42.812l42.813%2C0l0%2C-42.812z%22%20id%3D%22svg_2%22%20fill%3D%22%231e73be%22%2F%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E);
+        background-size: 40px 35px;
+        background-repeat: no-repeat;
+        background-position: 13px 15px;
+        background-color: white;
+        @media only screen and (max-width: 575px){
+          position: relative; margin:0 auto;
+          width: 50px; height: 50px;
+          border: solid 1px cornflowerblue !important;
+          top:-26px;
+          background-size: 30px 25px;
+          background-position: 9px 11px;
+        }
+      }
+      cite{
+        color: rgba(0,0,0,0.5);
+        font-weight: bold;
+        margin: 0 0 0 18px;
+      }
+      .blockquote-footer{
+        font-size: 64%;
+      }
+      @media only screen and (max-width: 575px){
+        padding:0;
+        border: solid 1px cornflowerblue;
+        border-width: 1px 0 0 0;
+        margin: 20px 0 0 0;
+        justify-content:center
+      }
+    }
+    .blockquote {
+      p {
+        text-align: left;
+        @media only screen and (max-width: 575px){
+          text-align: center;
+          padding: 0; margin:-15px 0 0 0;
+        }
+      }
+    }
+    @media only screen and (max-width: 575px){
+      padding: 0 30px;
+    }
+  }
+  &.customers_scroll{
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    margin:0 0 20px 0;
+    h2{
+      font-family: 'Montserrat', sans-serif !important;
+      font-size: 28px;
+      line-height: 44px;
+      /* padding: 38px 0 30px 0; */
+      font-weight: normal;
+    }
+    .container{
+      overflow: hidden;
+      padding: 0;
+      @media (min-width: 960px){
+        overflow: hidden;
+        padding: 0;
+      }
+    }
+    .row{
+      display:block;
+    }
+    .scroll-box{
+      display: inline-block;
+      float: none;
+      padding: 0 !important;
+
+      figure{
+        padding: 0; margin: 0;
+        img{
+          width: 100%;
+        }
+      }
+    }
+    div[class^="col-"]{
+      color: #fff;
+      font-size: 48px;
+      line-height:100px;
+
+      &:nth-child(3n+1){
+        background: #c69;
+      }
+      &:nth-child(3n+2){
+        background: #9c6;
+      }
+      &:nth-child(3n+3){
+        background: #69c;
+      }
+    }
+  }
+
+  &.services{
+    font-family: 'Montserrat', sans-serif !important;
+    margin: 20px 0 30px 0;
+
+    h3{
+      color: #1e73be;
+      position: relative;
+      font-size: 24px;
+      margin: 10px auto 19px auto;
+      padding: 0 0 10px 0;
+      border: solid 1px rgba(30, 115, 190, 0.4);
+      border-width: 0 0 1px 0;
+    }
+    p{
+      font-size: 18px;
+      color: inherit;
+    }
+    .strategyServices{
+      .card{
+        &:hover{
+          &:after{
+            width:100%;
+          }
+        }
+      }
+    }
+    .applicationDevelopmentServices{
+      margin: 0 0 20px 0;
+
+      .card{
+        &:hover{
+          &.border-info{
+            border:solid 1px #17a2b8 !important;
+          }
+          .card-header{
+            &:after{
+              border:solid 1px #17a2b8 !important;
+            }
+          }
+        }
+        &.border-info{
+          border:solid 1px gray !important;
+        }
+        &:hover{
+          &:after{
+            display:none;
+          }
+        }
+        .card-header{
+          background:white;
+          font-size: 16px;
+          padding: 7px 0 6px 11px;
+          &:after{
+            width: 40px;
+            height: 40px;
+            content: '';
+            position: absolute;
+            top: -20px;
+            right: -20px;
+            border: solid 1px gray;
+            border-radius: 50%;
+            display: block;
+            background-size: 25px 25px;
+            background-repeat: no-repeat;
+            background-position: 7px 6px;
+            background-color: white;
+          }
+        }
+        .card-body{
+          background: rgba(255,255,255,0.5) !important;
+
+          p{
+            padding: 10px 0 0 0;
+            font-size: 16px !important;
+          }
+        }
+        &.appModernization{
+          .card-header{
+            &:after{
+              background-image: url(data:image/svg+xml,%3Csvg%20width%3D%2280.9%22%20height%3D%2280%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%20%3Cstyle%20type%3D%22text%2Fcss%22%3E.st0%7Bdisplay%3Anone%3B%7D%0A%09.st1%7Bdisplay%3Ainline%3B%7D%0A%09.st2%7Bfill%3Anone%3Bstroke%3A%23B3B3B3%3Bstroke-width%3A0.1%3Bstroke-miterlimit%3A10%3B%7D%0A%09.st3%7Bfill%3A%236495ED%3B%7D%3C%2Fstyle%3E%0A%20%3Cg%3E%0A%20%20%3Ctitle%3EApp%20Modernization%3C%2Ftitle%3E%0A%20%20%3Cg%20id%3D%22svg_1%22%20class%3D%22st0%22%3E%0A%20%20%20%3Cg%20id%3D%22svg_2%22%20class%3D%22st1%22%3E%0A%20%20%20%20%3Crect%20id%3D%22svg_3%22%20height%3D%2260%22%20width%3D%2260%22%20class%3D%22st2%22%20y%3D%222%22%20x%3D%222%22%2F%3E%0A%20%20%20%20%3Cline%20id%3D%22svg_4%22%20y2%3D%2262%22%20x2%3D%2232%22%20y1%3D%222%22%20x1%3D%2232%22%20class%3D%22st2%22%2F%3E%0A%20%20%20%20%3Cline%20id%3D%22svg_5%22%20y2%3D%2232%22%20x2%3D%222%22%20y1%3D%2232%22%20x1%3D%2262%22%20class%3D%22st2%22%2F%3E%0A%20%20%20%20%3Cline%20id%3D%22svg_6%22%20y2%3D%2262%22%20x2%3D%2262%22%20y1%3D%222%22%20x1%3D%222%22%20class%3D%22st2%22%2F%3E%0A%20%20%20%20%3Crect%20id%3D%22svg_7%22%20height%3D%2244%22%20width%3D%2244%22%20class%3D%22st2%22%20y%3D%2210%22%20x%3D%2210%22%2F%3E%0A%20%20%20%20%3Cline%20id%3D%22svg_8%22%20y2%3D%2262%22%20x2%3D%222%22%20y1%3D%222%22%20x1%3D%2262%22%20class%3D%22st2%22%2F%3E%0A%20%20%20%20%3Cline%20id%3D%22svg_9%22%20y2%3D%222%22%20x2%3D%2232%22%20y1%3D%2232%22%20x1%3D%222%22%20class%3D%22st2%22%2F%3E%0A%20%20%20%20%3Cline%20id%3D%22svg_10%22%20y2%3D%2232%22%20x2%3D%2262%22%20y1%3D%222%22%20x1%3D%2232%22%20class%3D%22st2%22%2F%3E%0A%20%20%20%20%3Cline%20id%3D%22svg_11%22%20y2%3D%2262%22%20x2%3D%2232%22%20y1%3D%2232%22%20x1%3D%2262%22%20class%3D%22st2%22%2F%3E%0A%20%20%20%20%3Cline%20id%3D%22svg_12%22%20y2%3D%2232%22%20x2%3D%222%22%20y1%3D%2262%22%20x1%3D%2232%22%20class%3D%22st2%22%2F%3E%0A%20%20%20%20%3Ccircle%20id%3D%22svg_13%22%20r%3D%2221%22%20cy%3D%2232%22%20cx%3D%2232%22%20class%3D%22st2%22%2F%3E%0A%20%20%20%3C%2Fg%3E%0A%20%20%3C%2Fg%3E%0A%20%20%3Cpath%20id%3D%22svg_14%22%20d%3D%22m61.8%2C45.2c-9.2%2C0%20-16.5%2C7.4%20-16.5%2C16.5s7.4%2C16.5%2016.5%2C16.5s16.5%2C-7.4%2016.5%2C-16.5s-7.4%2C-16.5%20-16.5%2C-16.5zm-1.4%2C27.9c-5.7%2C-0.6%20-10%2C-5.6%20-10%2C-11.3c0%2C-3.2%201.4%2C-6.2%203.7%2C-8.4l-1.1%2C-2.3l7.6%2C0.6l-4.4%2C6.3l-1%2C-2.2c-1.4%2C1.7%20-2.3%2C3.7%20-2.3%2C6c0%2C4.5%203.3%2C8.3%207.8%2C8.8l-0.3%2C2.5zm10.3%2C-0.6l-7.7%2C-0.7l4.3%2C-6.2l1%2C2.2c1.5%2C-1.7%202.3%2C-3.7%202.3%2C-6c0%2C-4.5%20-3.3%2C-8.3%20-7.8%2C-8.8l0.3%2C-2.5c5.7%2C0.8%2010%2C5.6%2010%2C11.3c0%2C3.2%20-1.4%2C6.2%20-3.7%2C8.4l1.3%2C2.3z%22%20class%3D%22st3%22%2F%3E%0A%20%20%3Cpath%20id%3D%22svg_15%22%20d%3D%22m61.8%2C2l-43.3%2C0c-1.4%2C0%20-2.5%2C1.1%20-2.5%2C2.5l0%2C12.2c0.8%2C-0.4%201.7%2C-0.5%202.5%2C-0.6l0%2C-6.5l43.2%2C0l0%2C33.1c0.9%2C0%201.7%2C0.1%202.5%2C0.1l0%2C-38.3c0.1%2C-1.4%20-1%2C-2.5%20-2.4%2C-2.5zm-12.7%2C5.1l-17.8%2C0c-0.8%2C0%20-1.3%2C-0.5%20-1.3%2C-1.3s0.5%2C-1.3%201.3%2C-1.3l17.8%2C0c0.8%2C0%201.3%2C0.5%201.3%2C1.3s-0.6%2C1.3%20-1.3%2C1.3z%22%20class%3D%22st3%22%2F%3E%0A%20%20%3Cpath%20id%3D%22svg_16%22%20d%3D%22m43.8%2C68.1l-25.3%2C0l0%2C-25.4l-2.5%2C0l0%2C33.1c0%2C1.4%201.1%2C2.5%202.5%2C2.5l33.7%2C0c-3.8%2C-2.3%20-6.8%2C-5.8%20-8.4%2C-10.2zm-3.6%2C7.7c-1.4%2C0%20-2.5%2C-1.1%20-2.5%2C-2.5s1.1%2C-2.5%202.5%2C-2.5c1.4%2C0%202.5%2C1.1%202.5%2C2.5s-1.1%2C2.5%20-2.5%2C2.5z%22%20class%3D%22st3%22%2F%3E%0A%20%20%3Cpath%20id%3D%22svg_17%22%20d%3D%22m35.1%2C30c0%2C-3.6%20-2.8%2C-6.4%20-6.4%2C-6.4c-0.5%2C0%20-1.1%2C0.1%20-1.7%2C0.3c-0.9%2C-3.1%20-3.8%2C-5.3%20-7.2%2C-5.3c-3.3%2C0%20-6.1%2C2.2%20-7.2%2C5.1c-0.1%2C0%20-0.3%2C0%20-0.4%2C0c-3.6%2C0%20-6.4%2C2.8%20-6.4%2C6.4l0%2C0.1c-2.2%2C0.5%20-3.8%2C2.5%20-3.8%2C5c0%2C2.8%202.3%2C5.1%205.1%2C5.1l28%2C0c2.8%2C0%205.1%2C-2.3%205.1%2C-5.1s-2.3%2C-5.2%20-5.1%2C-5.2z%22%20class%3D%22st3%22%2F%3E%0A%20%3C%2Fg%3E%0A%3C%2Fsvg%3E);
+
+            }
+          }
+        }
+        &.customeAppDev{
+          .card-header{
+            &:after{
+              background-image: url(data:image/svg+xml,%3Csvg%20width%3D%22100%22%20height%3D%2285.7%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%20%3Cstyle%20type%3D%22text%2Fcss%22%3E.st0%7Bfill%3A%236495ED%3B%7D%3C%2Fstyle%3E%0A%20%3Cg%3E%0A%20%20%3Ctitle%3ECustom%20App%20Development%20%3C%2Ftitle%3E%0A%20%20%3Cg%20id%3D%22Layer_2%22%2F%3E%0A%20%20%3Cg%20id%3D%22Layer_1%22%3E%0A%20%20%20%3Cg%20id%3D%22svg_1%22%3E%0A%20%20%20%20%3Cpath%20id%3D%22svg_2%22%20d%3D%22m90.5%2C3l-81%2C0c-3.9%2C0%20-7%2C3.2%20-7%2C7l0%2C65.8c0%2C3.9%203.2%2C7%207%2C7l80.9%2C0c3.9%2C0%207%2C-3.2%207%2C-7l0%2C-65.8c0.1%2C-3.9%20-3.1%2C-7%20-6.9%2C-7zm-58%2C7.2c1.7%2C0%203%2C1.4%203%2C3c0%2C1.7%20-1.4%2C3%20-3%2C3c-1.7%2C0%20-3%2C-1.4%20-3%2C-3c0%2C-1.7%201.3%2C-3%203%2C-3zm-9.2%2C0c1.7%2C0%203%2C1.4%203%2C3c0%2C1.7%20-1.4%2C3%20-3%2C3c-1.7%2C0%20-3%2C-1.4%20-3%2C-3c0%2C-1.7%201.4%2C-3%203%2C-3zm-9.2%2C0c1.7%2C0%203%2C1.4%203%2C3c0%2C1.7%20-1.4%2C3%20-3%2C3c-1.7%2C0%20-3%2C-1.4%20-3%2C-3c0%2C-1.7%201.4%2C-3%203%2C-3zm76.9%2C65.6c0%2C0.3%20-0.2%2C0.5%20-0.5%2C0.5l-81%2C0c-0.3%2C0%20-0.5%2C-0.2%20-0.5%2C-0.5l0%2C-52.3l82%2C0l0%2C52.3z%22%20class%3D%22st0%22%2F%3E%0A%20%20%20%20%3Cpath%20id%3D%22svg_3%22%20d%3D%22m31.8%2C64.6c0.6%2C0.6%201.4%2C0.6%202%2C0l3.6%2C-3.7c0.6%2C-0.6%200.6%2C-1.5%200%2C-2l-9%2C-9l9%2C-9c0.6%2C-0.6%200.6%2C-1.5%200%2C-2l-3.6%2C-3.7c-0.6%2C-0.6%20-1.4%2C-0.6%20-2%2C0l-13.7%2C13.7c-0.6%2C0.6%20-0.6%2C1.5%200%2C2l13.7%2C13.7z%22%20class%3D%22st0%22%2F%3E%0A%20%20%20%20%3Cpath%20id%3D%22svg_4%22%20d%3D%22m62.5%2C61l3.6%2C3.7c0.6%2C0.6%201.5%2C0.6%202%2C0l13.8%2C-13.8c0.6%2C-0.6%200.6%2C-1.5%200%2C-2l-13.7%2C-13.7c-0.6%2C-0.6%20-1.4%2C-0.6%20-2%2C0l-3.7%2C3.7c-0.6%2C0.6%20-0.6%2C1.5%200%2C2l9%2C9l-9%2C9c-0.5%2C0.6%20-0.5%2C1.5%200%2C2.1z%22%20class%3D%22st0%22%2F%3E%0A%20%20%20%20%3Cpath%20id%3D%22svg_5%22%20d%3D%22m42.6%2C66.6l4.4%2C0c0.6%2C0%201.1%2C-0.4%201.3%2C-1l10.5%2C-30.4c0.3%2C-0.9%20-0.4%2C-1.9%20-1.3%2C-1.9l-4.5%2C0c-0.6%2C0%20-1.1%2C0.4%20-1.3%2C1l-10.5%2C30.4c-0.3%2C0.9%200.4%2C1.9%201.4%2C1.9z%22%20class%3D%22st0%22%2F%3E%0A%20%20%20%3C%2Fg%3E%0A%20%20%3C%2Fg%3E%0A%20%3C%2Fg%3E%0A%3C%2Fsvg%3E);
+
+            }
+          }
+        }
+        &.mobileAppDev{
+          .card-header{
+            &:after{
+              background-image: url(data:image/svg+xml,%3Csvg%20width%3D%2290%22%20height%3D%2287.8%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%20%3Cstyle%20type%3D%22text%2Fcss%22%3E.st0%7Bfill%3A%236495ED%3B%7D%3C%2Fstyle%3E%0A%20%3Cg%3E%0A%20%20%3Ctitle%3EMobile%20App%20Development%20%3C%2Ftitle%3E%0A%20%20%3Cg%20id%3D%22svg_1%22%3E%0A%20%20%20%3Cpath%20id%3D%22svg_2%22%20d%3D%22m52.6%2C23.8l0%2C-18.3c0%2C-0.9%20-0.4%2C-1.8%20-1.1%2C-2.4c-0.2%2C-0.1%20-0.4%2C-0.2%20-0.5%2C-0.3c-0.4%2C-0.2%20-0.9%2C-0.4%20-1.5%2C-0.4l-42.7%2C0c-1.7%2C0%20-3%2C1.4%20-3%2C3.1l0%2C76.2c0%2C1.7%201.4%2C3.1%203%2C3.1l42.7%2C0c1.7%2C0%203.1%2C-1.4%203.1%2C-3.1l0%2C-22.4l-4.3%2C0l0%2C10.6l-40.2%2C0l0%2C-62.5l40.2%2C0l0%2C16.4l4.3%2C0zm-24.4%2C48.8c2.4%2C0%204.4%2C2%204.4%2C4.4c0%2C2.4%20-2%2C4.4%20-4.4%2C4.4c-2.4%2C0%20-4.4%2C-2%20-4.4%2C-4.4c0%2C-2.5%202%2C-4.4%204.4%2C-4.4z%22%20class%3D%22st0%22%2F%3E%0A%20%20%3C%2Fg%3E%0A%20%20%3Cg%20id%3D%22svg_3%22%3E%0A%20%20%20%3Cpath%20id%3D%22svg_4%22%20d%3D%22m37.1%2C38.6l0%2C13.6c0%2C1.2%20-1%2C2.2%20-2.2%2C2.2l-13.5%2C0c-1.2%2C0%20-2.2%2C-1%20-2.2%2C-2.2l0%2C-13.6c0%2C-1.2%201%2C-2.2%202.2%2C-2.2l13.6%2C0c1.2%2C0.1%202.1%2C1%202.1%2C2.2z%22%20class%3D%22st0%22%2F%3E%0A%20%20%3C%2Fg%3E%0A%20%20%3Cg%20id%3D%22svg_5%22%3E%0A%20%20%20%3Cpath%20id%3D%22svg_6%22%20d%3D%22m87.4%2C16.8l0%2C17.9c0%2C1.6%20-1.3%2C2.8%20-2.8%2C2.8l-9.3%2C0l0%2C-8c0%2C-3.2%20-2.6%2C-5.8%20-5.8%2C-5.8l-5.6%2C0l0%2C-6.9c0%2C-1.6%201.3%2C-2.8%202.8%2C-2.8l17.9%2C0c1.6%2C0%202.8%2C1.3%202.8%2C2.8z%22%20class%3D%22st0%22%2F%3E%0A%20%20%3C%2Fg%3E%0A%20%20%3Cg%20id%3D%22svg_7%22%3E%0A%20%20%20%3Cpath%20id%3D%22svg_8%22%20d%3D%22m73.3%2C29.5l0%2C18.5l-6.8%2C0c-2.3%2C0%20-4.2%2C1.9%20-4.2%2C4.2l0%2C5.1l-16.7%2C0c-2.1%2C0%20-3.8%2C-1.7%20-3.8%2C-3.8l0%2C-24c0%2C-2.1%201.7%2C-3.8%203.8%2C-3.8l24%2C0c2%2C0.1%203.7%2C1.8%203.7%2C3.8z%22%20class%3D%22st0%22%2F%3E%0A%20%20%3C%2Fg%3E%0A%20%20%3Cg%20id%3D%22svg_9%22%3E%0A%20%20%20%3Cpath%20id%3D%22svg_10%22%20d%3D%22m82.3%2C52.2l0%2C13.6c0%2C1.2%20-1%2C2.2%20-2.2%2C2.2l-13.6%2C0c-1.2%2C0%20-2.2%2C-1%20-2.2%2C-2.2l0%2C-13.6c0%2C-1.2%201%2C-2.2%202.2%2C-2.2l13.6%2C0c1.2%2C0%202.2%2C1%202.2%2C2.2z%22%20class%3D%22st0%22%2F%3E%0A%20%20%3C%2Fg%3E%0A%20%3C%2Fg%3E%0A%3C%2Fsvg%3E);
+            }
+          }
+        }
+        &.cloudMigrations{
+          .card-header{
+            &:after{
+              background-image: url(data:image/svg+xml,%3Csvg%20width%3D%2290%22%20height%3D%2287.8%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%20%3Cstyle%20type%3D%22text%2Fcss%22%3E.st0%7Bfill%3A%236495ED%3B%7D%3C%2Fstyle%3E%0A%20%3Cg%3E%0A%20%20%3Ctitle%3ECloud%20Migrations%20%3C%2Ftitle%3E%0A%20%20%3Cg%20id%3D%22svg_1%22%3E%0A%20%20%20%3Cpath%20id%3D%22svg_2%22%20d%3D%22m34.6%2C19.33782c-10.8%2C0%20-19.8%2C8.4%20-20.5%2C19.3c-6%2C2.3%20-10%2C8%20-10%2C14.5c0%2C8.5%206.9%2C15.4%2015.4%2C15.4l29.2%2C0l0%2C-10.3l-10.2%2C0l17.9%2C-17.9l17.9%2C17.9l-10.2%2C0l0%2C10.3l6.5%2C0c8.5%2C0%2015.4%2C-6.9%2015.4%2C-15.4c0%2C-8%20-6.1%2C-14.6%20-14%2C-15.4c-2.3%2C-7.4%20-9.1%2C-12.4%20-16.8%2C-12.5c-1.8%2C0%20-3.6%2C0.3%20-5.4%2C0.8c-3.9%2C-4.2%20-9.4%2C-6.7%20-15.2%2C-6.7z%22%20class%3D%22st0%22%2F%3E%0A%20%20%3C%2Fg%3E%0A%20%3C%2Fg%3E%0A%3C%2Fsvg%3E);
+              background-size: 32px 32px;
+              background-position: 3px 2px;
+            }
+          }
+        }
+      }
+
+      .card-body{
+        -webkit-box-flex: 1;
+        -ms-flex: 1 1 auto;
+        flex: 1 1 auto;
+        padding: 11px 12px 0 18px;
+        height: 200px;
+      }
+
+    }
+    .extendedTeams{
+      .row{
+        margin:25px 0;
+      }
+    }
+    .card-header{
+      font-family: 'Montserrat', sans-serif !important;
+      font-weight: bold;
+      padding: 8px 10px 3px 19px;
+      margin-bottom: 0;
+      background-color: rgba(0,0,0,0.03);
+      border-bottom: 1px solid rgba(0,0,0,0.125);
+      font-size: 16px;
+    }
+  }
+  &.extendedTeamsServices{
+    padding:0 0 30px 0;
+  }
+}
+.fiveCols{
+  width: 19% !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ul.sales li{
+  padding: 6px 0 0 0;
+  line-height: 28px;
+}
+
+
+section ul li, section ul li p{
+  font-family: 'Montserrat', sans-serif !important;
+  font-size: 18px;
+  color: inherit;
+  letter-spacing: 1px;
+  list-style: none;
+}
+section ul li p{
+  font-size: 14px;
+}
+section ul.sales li::before{
+  content: '✓';
+  margin: 0 0 0 -20px;
+  padding: 0 3px 0 0;
+  color: green;
+}
+
+
+
+.hide{
+  display: none !important;
+}
+.txtL{
+  text-align: left !important;
+}
+.txtR{
+  text-align: right !important;
+}
+.txtCtr{
+  text-align: center !important;
+}
+
+
+/* Create three equal columns that floats next to each other */
+.column {
+    float: left;
+    width: 33.33%;
+    padding: 10px;
+    background-color: #ccc;
+    height: 250px;
+    a{
+      float: none;
+      color: black;
+      padding: 16px;
+      text-decoration: none;
+      display: block;
+      text-align: left;
+
+      &:hover{
+        background-color: #ddd;
+      }
+    }
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+.uniqueValue{
+  background: #005696;
+  color: white;
+  font-family: 'Montserrat', sans-serif !important;
+  text-align: center;
+  h3{
+  }
+  p{
+    font-size: 18px;
+    color: inherit;
+    letter-spacing: 1px;
+    &:last-child{
+      margin: 0 0 40px 0 !important;
+    }
+  }
+  i{
+    width: 70px; height: 70px;
+    border-radius: 100%;
+    border: solid 1px white;
+    position: relative;
+    display: block;
+    margin: 32px auto 0 auto;
+  }
+  .nearshore{
+    background-image: url(data:image/svg+xml,%3Csvg%20width%3D%22100%22%20height%3D%22100%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%20%3Cmetadata%20id%3D%22metadata16%22%3Eimage%2Fsvg%2Bxml%3C%2Fmetadata%3E%0A%20%3Cg%3E%0A%20%20%20%3Cpath%20fill%3D%22%23ffffff%22%20id%3D%22path3368-3%22%20d%3D%22m50.05859%2C5.95898c-16.6484%2C0%20-30.10742%2C13.10516%20-30.10742%2C29.28125c0%2C16.1761%2030.10742%2C47.9375%2030.10742%2C47.9375c0%2C0%2030.10938%2C-31.7614%2030.10938%2C-47.9375c0%2C-16.17609%20-13.46099%2C-29.28125%20-30.10938%2C-29.28125zm-0.05859%2C15.27149a9.36317%2C9.36317%200%200%201%209.36328%2C9.36133a9.36317%2C9.36317%200%200%201%20-9.36328%2C9.36328a9.36317%2C9.36317%200%200%201%20-9.36328%2C-9.36328a9.36317%2C9.36317%200%200%201%209.36328%2C-9.36133z%22%2F%3E%0A%20%20%20%3Cpath%20fill%3D%22%23ffffff%22%20class%3D%22st0%22%20d%3D%22m67.17972%2C68.77372c-0.94459%2C0%20-1.7711%2C0.70844%20-1.7711%2C1.65303c0%2C0.94459%200.82651%2C1.65303%201.7711%2C1.65303l5.43139%2C0l6.02176%2C18.53757l-57.14767%2C0l6.02176%2C-18.53757l5.43138%2C0c0.94459%2C0%201.77111%2C-0.70844%201.77111%2C-1.65303c0%2C-0.94459%20-0.82652%2C-1.65303%20-1.77111%2C-1.65303l-8.02901%2C0l-8.26515%2C25.26777l66.71164%2C0l-8.26516%2C-25.26777l-7.91094%2C0z%22%20id%3D%22path3419%22%2F%3E%0A%20%20%3C%2Fg%3E%0A%3C%2Fsvg%3E);
+    background-size: 50px;
+    background-repeat: no-repeat;
+    background-position: 9px 8px;
+  }
+  .businessFocus{
+    background-image: url(data:image/svg+xml,%3Csvg%20width%3D%22100%22%20height%3D%22100%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%20%3Cmetadata%20id%3D%22metadata16%22%3Eimage%2Fsvg%2Bxml%3C%2Fmetadata%3E%0A%20%3Cg%3E%0A%20%20%3Cpath%20fill%3D%22%23ffffff%22%20d%3D%22m94.96822%2C56.3184c0%2C-4.53108%20-2.5443%2C-8.4398%20-6.19392%2C-10.20756c2.99488%2C-2.0522%204.98428%2C-5.62495%204.98428%2C-9.68353c0%2C-6.35228%20-4.87006%2C-11.52097%20-10.85533%2C-11.52097c-5.98527%2C0%20-10.85533%2C5.16869%20-10.85533%2C11.52097c0%2C4.31344%202.24571%2C8.07708%205.55897%2C10.05197c-3.253%2C1.89375%20-5.47083%2C5.55145%20-5.50051%2C9.75512l0%2C0.65861l-1.58918%2C-2.41205l-5.01396%2C0l0%2C-11.81209c0%2C-3.34462%20-1.21864%2C-6.48687%20-3.43287%2C-8.84929c-1.45967%2C-1.55681%20-3.24041%2C-2.65068%20-5.18394%2C-3.22053c2.20075%2C-2.04074%203.59566%2C-5.03791%203.59566%2C-8.37585c0%2C-6.13369%20-4.70277%2C-11.12389%20-10.48119%2C-11.12389c-5.77932%2C0%20-10.48119%2C4.99115%20-10.48119%2C11.12389c0%2C3.34366%201.39851%2C6.3437%203.60465%2C8.3854c-4.96899%2C1.47567%20-8.62581%2C6.32174%20-8.62581%2C12.06122l0%2C11.81209l-5.01395%2C0l-1.58918%2C2.41206l0%2C-0.65862c-0.02968%2C-4.20271%20-2.24751%2C-7.86041%20-5.50141%2C-9.75512c3.31416%2C-1.97488%205.55897%2C-5.73948%205.55897%2C-10.05197c0%2C-6.35228%20-4.87006%2C-11.52097%20-10.85533%2C-11.52097c-5.98527%2C0%20-10.85533%2C5.16869%20-10.85533%2C11.52097c0%2C4.05859%201.9885%2C7.63038%204.98428%2C9.68353c-3.65052%2C1.76681%20-6.19482%2C5.67554%20-6.19482%2C10.20661l0%2C19.76127l9.83455%2C0l-8.67797%2C12.82102l87.62328%2C0l-8.67707%2C-12.82102l9.83365%2C0l0%2C-19.76127zm-19.68079%2C-19.89109c0%2C-4.4633%203.40949%2C-8.08186%207.61582%2C-8.08186c4.20632%2C0%207.61492%2C3.61856%207.61492%2C8.08186c0%2C4.46425%20-3.4086%2C8.08186%20-7.61492%2C8.08186c-4.20633%2C0%20-7.61582%2C-3.61761%20-7.61582%2C-8.08186zm21.33292%2C44.68551l4.79991%2C-7.23712c1.83111%2C-2.50368%204.28997%2C-0.79129%204.28997%2C-0.79129c1.38952%2C1.03851%201.72318%2C3.07735%200.74467%2C4.55303l-5.71906%2C8.62307c-0.57739%2C0.8686%20-1.51632%2C1.38595%20-2.51822%2C1.38595l-11.44351%2C0c-1.7007%2C0%20-3.07852%2C-1.46232%20-3.07852%2C-3.2673c0%2C-1.80498%201.37782%2C-3.2673%203.07852%2C-3.2673l9.84624%2C0l0%2C0.00096zm-53.86113%2C-58.88962c0%2C-4.24376%203.24221%2C-7.68478%207.24078%2C-7.68478c3.99947%2C0%207.24078%2C3.44007%207.24078%2C7.68478c0%2C4.24472%20-3.24131%2C7.68574%20-7.24078%2C7.68574c-3.99857%2C0%20-7.24078%2C-3.44006%20-7.24078%2C-7.68574zm48.83998%2C79.33623c0%2C-5.01787%203.83219%2C-9.08696%208.56105%2C-9.08696l7.43505%2C0.0019c4.72886%2C0%208.52777%2C4.06718%208.52777%2C9.08506l0%2C11.81209l-4.85657%2C0l0%2C-12.45544l-1.48935%2C0c0%2C0%200%2C9.69117%20-0.0018%2C12.45544l-11.83023%2C0l0%2C-12.45544l-1.48935%2C0l0%2C12.45544l-4.85657%2C0l0%2C-11.81209zm-58.69252%2C-40.33769c1.6998%2C0%203.07853%2C1.46231%203.07853%2C3.26729c0%2C1.80499%20-1.37873%2C3.2673%20-3.07853%2C3.2673l-11.44441%2C0c-1.00189%2C0%20-1.94083%2C-0.51735%20-2.51732%2C-1.38595l-5.71816%2C-8.62402c-0.97851%2C-1.47568%20-0.64484%2C-3.51452%200.74557%2C-4.55303c0%2C0%202.45707%2C-1.71239%204.28907%2C0.79129l4.79901%2C7.23712l9.84624%2C0zm35.26768%2C15.54326c0%2C-4.4633%203.40949%2C-8.08185%207.61491%2C-8.08185c4.20543%2C0%207.61492%2C3.61855%207.61492%2C8.08185c0%2C4.46426%20-3.40949%2C8.08186%20-7.61492%2C8.08186c-4.20542%2C0%20-7.61491%2C-3.6176%20-7.61491%2C-8.08186zm22.2161%2C61.00865l0%2C-16.32313c0%2C-4.29435%203.25749%2C-7.77641%208.18781%2C-7.77641c4.93032%2C0%208.19411%2C3.48206%208.19411%2C7.77641l-0.0009%2C3.1833l-0.75187%2C0l-4.31515%2C-6.50691c-1.22763%2C-1.82694%20-4.00847%2C-3.06112%20-6.54737%2C-1.20746c-1.02618%2C0.76648%20-1.70969%2C1.91094%20-1.92464%2C3.22339c-0.21495%2C1.31246%200.06385%2C2.63541%200.78694%2C3.72451l5.71906%2C8.62307c0.50634%2C0.76456%201.19975%2C1.34968%201.9876%2C1.70953l-2.4139%2C3.57274l-8.92169%2C0l0%2C0.00096zm79.22051%2C12.82005l-74.98721%2C0l10.82475%2C-15.98617l9.57554%2C0c2.59107%2C0%204.69918%2C-2.23738%204.69918%2C-4.98733c0%2C-2.74995%20-2.10811%2C-4.98733%20-4.69918%2C-4.98733l-2.8303%2C0l1.07024%2C-1.58067l37.70765%2C0l1.07025%2C1.58067l-2.8312%2C0c-2.59107%2C0%20-4.69918%2C2.23738%20-4.69918%2C4.98733c0%2C2.74995%202.10811%2C4.98733%204.69918%2C4.98733l9.57463%2C0l10.82565%2C15.98617zm4.23331%2C-12.82006l-8.9208%2C0l-2.41479%2C-3.57274c0.78874%2C-0.35985%201.48035%2C-0.94496%201.98849%2C-1.70953l5.71816%2C-8.62307c0.72309%2C-1.09005%201.0019%2C-2.41205%200.78695%2C-3.7245c-0.21495%2C-1.31246%20-0.89847%2C-2.45692%20-1.92464%2C-3.22339c-2.53981%2C-1.85367%20-5.32064%2C-0.61948%20-6.54738%2C1.20745l-4.31515%2C6.50692l-0.75186%2C0l-0.0018%2C-3.1833c0%2C-4.29435%203.26379%2C-7.77642%208.1941%2C-7.77642c4.93032%2C0%208.18782%2C3.48207%208.18782%2C7.77642l0%2C16.32216l0.0009%2C0z%22%20id%3D%22path6%22%2F%3E%0A%20%3C%2Fg%3E%0A%3C%2Fsvg%3E);
+    background-size: 50px;
+    background-repeat: no-repeat;
+    background-position: 9px 8px;
+  }
+  .methodology{
+    background-image: url(data:image/svg+xml,%3Csvg%20width%3D%22100%22%20height%3D%22100%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%20%3Cmetadata%20id%3D%22metadata24%22%3Eimage%2Fsvg%2Bxml%3C%2Fmetadata%3E%0A%20%3Cg%3E%0A%20%20%3Cg%20id%3D%22g4%22%3E%0A%20%20%20%3Cpath%20fill%3D%22%23FFFFFF%22%20stroke-width%3D%224%22%20d%3D%22m66.98618%2C12.41445l-1.59375%2C2.125l-15%2C20.00004l3.1875%2C2.4062l12%2C-15.99999c0.0979%2C1.34302%200.15625%2C2.69534%200.15625%2C4.0625c0%2C31.36589%20-25.38415%2C56.74999%20-56.75%2C56.74999l0%2C4c33.52761%2C0%2060.75%2C-27.2223%2060.75%2C-60.74999c0%2C-0.77721%20-0.0026%2C-1.5409%20-0.03125%2C-2.3125l10.6875%2C14.24999l3.1875%2C-2.4062l-15%2C-20.00004l-1.59375%2C-2.125zm-36%2C1.34375c-7.15602%2C0%20-13%2C5.84393%20-13%2C13c0%2C7.15599%205.84398%2C12.99999%2013%2C12.99999c7.15602%2C0%2013%2C-5.844%2013%2C-12.99999c0%2C-7.15607%20-5.84398%2C-13%20-13%2C-13zm0%2C4c4.99425%2C0%209%2C4.00567%209%2C9c0%2C4.99427%20-4.00575%2C8.99999%20-9%2C8.99999c-4.99424%2C0%20-9%2C-4.00582%20-9%2C-8.99999c0%2C-4.99433%204.00576%2C-9%209%2C-9zm-18.59375%2C27.56249l-2.8125%2C2.8438l8.59375%2C8.5937l-8.59375%2C8.5625l2.8125%2C2.8438l8.59375%2C-8.5938l8.59375%2C8.5938l2.8125%2C-2.8438l-8.59375%2C-8.5625l8.59375%2C-8.5937l-2.8125%2C-2.8438l-8.59375%2C8.5938l-8.59375%2C-8.5938zm65.59375%2C15.4375c-7.15602%2C0%20-13%2C5.8439%20-13%2C13c0%2C7.156%205.84398%2C13%2013%2C13c7.15602%2C0%2013%2C-5.844%2013%2C-13c0%2C-7.1561%20-5.84398%2C-13%20-13%2C-13zm0%2C4c4.99425%2C0%209%2C4.0057%209%2C9c0%2C4.9942%20-4.00575%2C9%20-9%2C9c-4.99424%2C0%20-9%2C-4.0058%20-9%2C-9c0%2C-4.9943%204.00576%2C-9%209%2C-9z%22%20id%3D%22path3373%22%2F%3E%0A%20%20%3C%2Fg%3E%0A%20%3C%2Fg%3E%0A%3C%2Fsvg%3E);
+    background-size: 50px;
+    background-repeat: no-repeat;
+    background-position: 10px 8px;
+  }
+}
+
+.microsoftPartnership{
+  padding: 0 0 50px 0;
+}
+
+@-webkit-keyframes rotating /* Safari and Chrome */ {
+  from {
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotating {
+  from {
+    -ms-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -ms-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+.rotating {
+  -webkit-animation: rotating 1s linear infinite;
+  -moz-animation: rotating 1s linear infinite;
+  -ms-animation: rotating 1s linear infinite;
+  -o-animation: rotating 1s linear infinite;
+  animation: rotating 1s linear infinite;
+}
+
+.loader{
+  margin: 0 0 2em;
+  height: 200px;
+  width: 100%;
+  text-align: center;
+  padding: 1em;
+  margin: 0 auto 1em;
+  display: inline-block;
+  vertical-align: top;
+
+  svg{
+    margin-top: 20px;
+    transform: scale(1.75);
+  }
+}
+
+.inxo-xapp-container{
+  width: 100% !important;
+  border:solid 1px red;
+}
+
+
+
+
+
+.dropdown-toggle {
+  cursor: pointer;
+}
+
+.navbar-brand {
+  cursor: pointer;
+}
+
+.modal-lg{
+  @media screen and (max-width: 767px) {
+    // border:solid 1px blue;
+    width: 97% !important;
+    float: none;
+  }
+  @media screen and (min-width: 768px) {
+    // border:solid 1px red;
+    max-width: 95% !important;
+  }
+  @media screen and (min-width: 1920px) {
+    // border:solid 1px orange;
+    max-width: 60% !important;
+  }
+}
+.modal-content{
+  border:solid 1px lightblue;
+}
+
+/* parallax efect stylesheet */
+.paralax {
+  min-height: 520px;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: 50% 50%;
+  padding-top: 110px;
+
+  p{
+    font-size: 24px;
+    color:#f5f5f5;
+    text-align: left;
+    line-height: 30px;
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    padding: 25px 0;
+    margin: 0 0 10px 0;
+    @media (max-width: 767px) {
+      width: 100%;
+      line-height: 36px;
+      padding: 0 0 24px 0;
+    }
+    @media only screen and (max-width: 575px){
+      line-height: 36px;
+      padding: 0 0 24px 0;
+    }
+    @media only screen and (max-width: 320px){
+      line-height: 36px;
+      padding: 0 0 24px 0;
+    }
+
+    &.lead{
+
+      @media (max-width: 991px) {
+        width: 75%;
+        line-height: 36px;
+        padding: 0 0 24px 0;
+      }
+    }
+  }
+  h1{
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 60px; font-weight: 300;
+    text-align: left;
+    padding-top: 60px;
+    line-height: 64px;
+    position: relative;
+
+    text-shadow: 3px 2px 10px rgba(16,7,71,0.5);
+
+    @media only screen and (max-width: 575px){
+      font-size: 48px;
+      line-height: 50px;
+      padding: 40px 0 20px 0;
+    }
+    @media only screen and (max-width: 320px){
+      font-size: 42px;
+      line-height: 50px;
+      padding: 40px 0 20px 0;
+    }
+  }
+  h3{
+    margin: 10px 0 0 0;
+    font-size: 28px;
+    letter-spacing: 0;
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 600;
+  }
+}
+.jumbotron{
+  font-family: 'Montserrat', sans-serif !important;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 0;
+  border-radius: 0% !important;
+  .card{
+    background: rgba(255,255,255,0.1);
+    cursor: pointer;
+
+    h3{
+      color: whithe !important;
+      padding: 0 0 20px 0;
+    }
+    &:after{
+      width: 100%;
+      content: 'click to read more...';
+      float: right;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      font-size: 14px;
+      text-align: right;
+      color: white;
+      display: none;
+
+      @media (max-width: 767px) {
+        display: block;
+      }
+    }
+    &:hover{
+      background: rgba(255,255,255,0.3);
+      &:after{
+        display:block;
+      }
+    }
+    .card-text{
+      color: whithe !important;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+      text-align: center !important;
+      font-size: 22px !important;
+      line-height: 34px !important;
+      letter-spacing: 1px;
+      font-weight: normal;
+      padding: 0 0 10px 0;
+    }
+  }
+
+  &::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    margin: 0; padding: 0;
+    top: 0; left: 0;
+    background: rgba(0,0,0,0.3)
+  }
+  &.home{
+    background-image: url("./assets/images/jumboTron/digitalTransformation.jpg");
+  }
+  &.transformation{
+    background-image: url("./assets/images/jumboTron/IT_Tranformation-WorkForceTransformation.jpg");
+    &::before{
+      width: 100%; height: 100%;
+      position: absolute; top: 0; left: 0;
+      display: block;
+      background-color: rgba(0, 0, 0, 0.7);
+      content: '';
+    }
+  }
+  &.StrategyServices{
+    background-image: url("./assets/images/jumboTron/strategy_services.jpg?v=1.0");
+  }
+  &.Azure-IaaS{
+    background-image: url("./assets/images/jumboTron/azure-infraestructure.jpg?v=1.1");
+    &::before{
+      background: rgba(0,0,0,0.3);
+    }
+  }
+  &.Office365{
+    background-image: url("./assets/images/jumboTron/office-365_8.jpg?v=1.0");
+    &::before{
+      background: rgba(0,0,0,0);
+    }
+  }
+  &.SharepointOnline{
+    background-image: url("./assets/images/jumboTron/intranet-portal.jpg?v=1.0");
+    &::before{
+      background: rgba(7,13,48,0.53);
+    }
+  }
+  &.ApplicationDevelopment{
+    background-image: url("./assets/images/jumboTron/appDevelopment2.jpg?v=1.0");
+  }
+  &.ApplicationModernization{
+    background-image: url("./assets/images/jumboTron/application-modernization.jpg?v=1.0");
+    &::before{
+      background: rgba(7,13,48,0.53);
+    }
+  }
+  &.ExtendedTeams{
+    background-image: url("./assets/images/jumboTron/extendedTeamsShadow.jpg?v=1.0");
+    &::before{
+      background: rgba(255,255,255,0);
+    }
+  }
+  &.customApplicationDevelopment{
+    background-image: url("./assets/images/jumboTron/customApplicationDevelopment.jpg?v=1.0");
+    &::before{
+      background: rgba(7,13,48,0.53);
+    }
+  }
+  &.Events{
+    background-image: url("./assets/images/jumboTron/events-webinars.jpg?v=1.0");
+    &::before{
+      background: rgba(7,13,48,0.53);
+    }
+  }
+  &.ClientStories{
+    background-image: url("./assets/images/jumboTron/client-stories.jpg?v=1.0");
+    &::before{
+      background: rgba(7,13,48,0.53);
+    }
+  }
+  &.News{
+    background-image: url("./assets/images/jumboTron/IT_News.jpg?v=1.0");
+    &::before{
+      background: rgba(7,13,48,0.53);
+    }
+  }
+  &.AboutUs{
+    background-image: url("./assets/images/jumboTron/Axen-Facility.jpg?v=1.0");
+    &::before{
+      background: rgba(7,13,48,0.53);
+    }
+  }
+  &.whoWeAre{
+    background-image: url("./assets/images/jumboTron/aboutAxen_2.jpg?v=1.0");
+    color: black;
+
+    p{
+      color: inherit !important;
+    }
+  }
+}
+
+.sub-jumbotron{
+  position: relative;
+  overflow: hidden;
+
+  @media (min-width: 1366px) {
+    max-height: 340px;
+  }
+  @media (min-width: 1023px) and (max-device-width: 1365px) {
+    max-height: 400px;
+  }
+  .paralax{
+    padding-top: 95px !important;
+  }
+}
+
+button.letsTalk{
+  padding: 0 37px !important;
+  font-size: 20px !important;
+  line-height: 65px !important;
+
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+
+  -webkit-animation-name: fadein;
+  -webkit-animation-duration: 2s;
+  animation-name: fadein;
+  animation-duration: 2s;
+
+  z-index: 5;
+
+  &:hover{
+    -webkit-box-shadow: 0 0 10px 1px rgba(255,255,255,0.8);
+    box-shadow: 0 0 10px 1px rgba(255,255,255,0.8);
+  }
+
+}
+
+
+.paralsec2 {background-image: url("./assets/images/jumboTron/digitalTransformation.jpg");}
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    .w-actionbox.controls_right {
+        display:none;
+    }
+}
+
+.catchySlogan{
+  background: #f1f3f5;
+  border:solid 1px #dddddd;
+  border-width: 1px 0;
+
+  .container{
+    h3{
+
+    }
+    h2{
+      font-family: 'Montserrat', sans-serif !important;
+      color: midnightblue;
+      font-size: 28px;
+      line-height: 44px;
+      padding: 38px 0 30px 0;
+      font-weight: normal;
+      &.appDev{
+        padding: 20px 0 0 0;
+      }
+    }
+  }
+  p{
+    font-family: 'Montserrat', sans-serif !important;
+    color: midnightblue;
+    font-size: 18px;
+    color: inherit;
+    letter-spacing: 1px;
+  }
+  h4{
+    margin: 0 0 24px 0 !important;
+    letter-spacing: 0 !important;
+    font-size: 20px;
+    color: #111;
+  }
+  &.white{
+    background: white;
+    border: none;
+    h2{
+      color: inherit;
+      padding: 38px 0 0px 0;
+
+      span{
+        color: midnightblue;
+      }
+    }
+  }
+  &.blue{
+    background: #005696;
+    border:solid 1px cornflowerblue;
+    border-width: 1px 0;
+    h2{
+      color: white;
+      padding: 38px 0 0px 0;
+    }
+    p{
+      color:white;
+      &:last-child{
+        padding: 0 0 28px 0;
+      }
+    }
+  }
+  &.office365{
+    p{
+      text-align:justify;
+    }
+  }
+  &.whoWeAre{
+    background-image: url("./assets/images/jumboTron/aboutAxen_2.jpg?v=1.0");
+    min-height: 385px;
+    background-size: cover;
+    background-position: top right;
+    background-repeat: no-repeat;
+    padding:50px 0 30px 0;
+    border: solid 1px #999;
+    border-width: 0 0 1px 0;
+
+    p{
+      color: #555;
+    }
+  }
+  &.happyClients{
+    background: #f2f2f2;
+    h2{
+      color: #555;
+    }
+    span{
+      color: cornflowerblue !important;
+    }
+
+    &.callToAction{
+      padding-bottom: 40px;
+    }
+  }
+}
+
+h4.lineOnly::after{
+  width: 150px;
+  content: '';
+  display: block;
+  margin: 15px auto 0 auto;
+  border: solid 1px #777;
+  border-width: 0 0 1px 0;
+}
